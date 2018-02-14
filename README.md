@@ -6,7 +6,7 @@ A Docker image which serves [ReDoc](https://rebilly.github.io/ReDoc/) documentat
 
 To serve `swagger.yaml` in the current directory:
 
-    $ docker run -p 80:80 -v $(PWD)/swagger.yaml:/usr/share/nginx/html/swagger.yaml bfirsh/redoc
+    $ docker run -p 80:80 -v $(PWD)/swagger.yaml:/usr/share/nginx/html/swagger.yaml containerize/redoc
 
 And it'll be running at [http://localhost](http://localhost).
 
@@ -20,7 +20,7 @@ The following example illustrates customisation of runtime settings;
       -e PAGE_TITLE="My API docs" \
       -e SPEC_URL=swagger.json \
       -e 'REDOC_OPTIONS=hide-hostname="true" lazy-rendering'\
-      bfirsh/redoc
+      containerize/redoc
 
 ## Runtime configuration
 
